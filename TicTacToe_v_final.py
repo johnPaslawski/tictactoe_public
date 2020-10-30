@@ -179,7 +179,8 @@ def tictactoe_game(board, player_mark):
             player_mark = 'O'
         coordinates = get_move()
         if coordinates == ('quit'):
-            print("Quitting programm. . .\n\nBYE !\n")
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("\n\nQuitting programm . . .\n\n--- BYE ! ---\n")
             sys.exit()
         mark(player_mark, board, coordinates)
         os.system('cls' if os.name == 'nt' else 'clear')
